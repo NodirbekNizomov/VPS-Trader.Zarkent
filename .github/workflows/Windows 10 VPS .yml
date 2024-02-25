@@ -2,16 +2,15 @@ name: Windows - RustDesk
 
 on:
   workflow_dispatch:
+jobs:
 
-   jobs:
-     build:
+  build:
        name: Start Building...
        runs-on: windows-latest
 
-
        steps:
          - name: Downloading & Installing Essentials
-            run: |
+           run: |
               invoke-WebRequest -Url "https://www.dropbox.com/scl/fi/qdyd4p9t6xoab195n5o3g/Downloads.bat?rlkey=srn74vv1vr8k5suujugvrhjtm&dl=1" -OutFile "Downloads.bat"
               cmd /c Downloads.bat
 
